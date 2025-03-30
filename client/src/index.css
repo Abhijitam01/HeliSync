@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: #080808;
+    background-image: 
+      linear-gradient(rgba(45, 45, 45, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 45, 45, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 227 91% 68%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 95% 64%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 227 16% 16%;
+    --muted-foreground: 227 16% 65%;
+    --accent: 250 95% 64%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 8% 16%;
+    --input: 217 8% 16%;
+    --ring: 217 68% 62%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply bg-[#0a0a0a] border-b border-[#222] py-3 px-4 flex justify-between items-center;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 text-[#aaa] hover:bg-[#151515] hover:text-white transition-colors;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-[#151515] text-white;
+  }
+  
+  .dashboard-card {
+    @apply bg-[#121212] border border-[#222] rounded-lg p-5;
+  }
+  
+  .form-card {
+    @apply bg-[#121212] border border-[#222] rounded-lg p-5;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#3b82f6] to-[#6366f1] bg-clip-text text-transparent;
+  }
+  
+  .secondary-gradient-text {
+    @apply bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent;
+  }
+  
+  .solana-gradient {
+    @apply bg-gradient-to-r from-[#9945FF] to-[#14F195];
+  }
+  
+  .helius-gradient {
+    @apply bg-gradient-to-r from-[#FC9965] to-[#FF5D5D];
+  }
+  
+  .glass-effect {
+    @apply bg-black/20 backdrop-blur-md border border-white/10;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
