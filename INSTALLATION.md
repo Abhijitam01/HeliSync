@@ -99,27 +99,6 @@ npm run db:push
 npm start
 ```
 
-## Deployment Options
-
-### Deploying to Replit
-
-1. Fork the HeliSync repository to your Replit account
-2. Set up the required environment variables in the Replit Secrets panel
-3. Run the "Start application" workflow
-
-### Deploying to Vercel
-
-1. Connect your GitHub repository to Vercel
-2. Set up the required environment variables in the Vercel project settings
-3. Deploy the application
-
-### Deploying to Heroku
-
-1. Create a new Heroku app
-2. Connect your GitHub repository to the Heroku app
-3. Set up the required environment variables in the Heroku app settings
-4. Deploy the application
-
 ## Setting Up a PostgreSQL Database
 
 ### Using Neon Serverless PostgreSQL
